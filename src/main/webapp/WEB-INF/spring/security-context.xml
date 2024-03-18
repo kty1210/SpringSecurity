@@ -6,7 +6,15 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+	<!-- 	<security:http auto-config="true" use-expressions="false" -->
 	<security:http>
+	
+		<security:intercept-url pattern="/sample/all" access="permitAll"/>
+
+		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
+
+		 
+	
 		<!-- 기본적인 로그인 화면 제공 -->	
 		<security:form-login/>
 	
