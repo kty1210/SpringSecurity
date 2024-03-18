@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<security:http>
+		<!-- 기본적인 로그인 화면 제공 -->	
+		<security:form-login/>
+	
+	</security:http>
+
+		<!-- 범위 -->
+	<security:authentication-manager>
+	
+	</security:authentication-manager>
+
+</beans>
