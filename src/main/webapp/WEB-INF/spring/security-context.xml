@@ -6,6 +6,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+	<!-- 기본적인 로그인 화면 제공 경계 지정-->	
 	<!-- 	<security:http auto-config="true" use-expressions="false" -->
 	<security:http>
 	
@@ -13,16 +14,28 @@
 
 		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
 
+		<security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')"/>
 		 
 	
-		<!-- 기본적인 로그인 화면 제공 -->	
 		<security:form-login/>
+		
+		<security:access-denied-handler error-page="accessError"/>
 	
 	</security:http>
 
 		<!-- 범위 -->
 	<security:authentication-manager>
 	
+	
+		<security:authentication-provider>
+			<security:user-service>
+				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
+				
+				<!-- admin은 member 권한도 부여 -->
+				<security:user name="admin" password="{noop}admin" 
+					authorities="ROLE_ADMIN, ROLE_MEMBER"/>
+			</security:user-service>
+		</security:authentication-provider>
 	</security:authentication-manager>
 
 </beans>
