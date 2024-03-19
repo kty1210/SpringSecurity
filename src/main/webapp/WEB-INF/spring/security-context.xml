@@ -26,7 +26,11 @@
 		<!-- <security:form-login/> -->
 		<!-- <security:form-login login-page="/customLogin"/> -->
 		<security:form-login login-page="/customLogin"
-			authentication-success-handler-ref="CustomLoginSuccessHandler"/>
+			authentication-success-handler-ref="customLoginSuccessHandler"/>
+		
+		<!--  <security:csrf disabled="true"/> -->
+		
+		<security:logout logout-url="/customLogout" invalidate-session="true"/>
 		
 	</security:http>
 

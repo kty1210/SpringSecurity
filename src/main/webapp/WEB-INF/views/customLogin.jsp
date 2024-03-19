@@ -13,10 +13,10 @@
 	<h2><c:out value="${logout}"/></h2>
 	<form method="post" action="/login">
 		<div>
-			<input type="text" name='username' value='admin' />
+			<input type="text" name='username' value='' />
 		</div>
 		<div>
-			<input type="password" name='password' value='admin' />
+			<input type="password" name='password' value='' />
 		</div>
 		<div>
 			<input type="submit" />
