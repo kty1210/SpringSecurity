@@ -1,5 +1,12 @@
 package com.study.erum.domain;
 
+
+import java.util.Date;
+import java.util.List;
+
+import lombok.Data;
+
+@Data
 public class MemberVO {
 
   private String userid;
@@ -7,8 +14,8 @@ public class MemberVO {
   private String userName;
   private boolean enabled;
   
-  private String userid;
-  private String userid;
-  private String userid;
+  private Date regDate;
+  private Date updateDate;
+  private List<AuthVO> authList;
   
 }
