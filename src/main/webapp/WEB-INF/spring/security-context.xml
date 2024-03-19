@@ -39,13 +39,15 @@
 	
 	
 		<security:authentication-provider>
-			<security:user-service>
+			<security:jdbc-user-service data-source-ref="dataSource"/>
+			<!-- 임의로 만든 두 명 -->
+			<!-- <security:user-service>
 				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
 				
-				<!-- admin은 member 권한도 부여 -->
+				admin은 member 권한도 부여
 				<security:user name="admin" password="{noop}admin" 
 					authorities="ROLE_ADMIN, ROLE_MEMBER"/>
-			</security:user-service>
+			</security:user-service> -->
 		</security:authentication-provider>
 	</security:authentication-manager>
 
