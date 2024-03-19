@@ -191,7 +191,6 @@
 		    <artifactId>mysql-connector-j</artifactId>
 		    <version>8.3.0</version>
 		</dependency>
-				
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -199,6 +198,7 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>        
+		
 	</dependencies>
     <build>
         <plugins>
