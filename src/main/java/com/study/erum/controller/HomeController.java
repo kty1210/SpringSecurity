@@ -1,4 +1,4 @@
-package com.study.erum;
+package com.study.erum.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

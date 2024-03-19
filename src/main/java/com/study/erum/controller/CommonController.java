@@ -1,4 +1,4 @@
-package com.study.erum;
+package com.study.erum.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
