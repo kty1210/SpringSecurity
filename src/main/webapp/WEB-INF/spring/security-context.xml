@@ -5,6 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <bean id="customAccessDenied" class="com.study.erum.security.CustomAccessDeniedHandler"></bean>
+<bean id="customLoginSuccessHandler" class="com.study.erum.security.CustomLoginSuccessHandler"></bean>
 
 	<!-- 기본적인 로그인 화면 제공 경계 지정-->	
 	<!-- 	<security:http auto-config="true" use-expressions="false" -->
@@ -23,7 +24,9 @@
 	
 		<!-- 주석은 기본값 밑에는 페이지 -->
 		<!-- <security:form-login/> -->
-		<security:form-login login-page="/customLogin"/>
+		<!-- <security:form-login login-page="/customLogin"/> -->
+		<security:form-login login-page="/customLogin"
+			authentication-success-handler-ref="CustomLoginSuccessHandler"/>
 		
 	</security:http>
 
