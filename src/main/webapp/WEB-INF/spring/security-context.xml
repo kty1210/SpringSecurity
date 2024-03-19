@@ -8,6 +8,7 @@
 <bean id="customLoginSuccessHandler" class="com.study.erum.security.CustomLoginSuccessHandler"></bean>
 <!-- <bean id="customPasswordEncoder" class="com.study.erum.security.CustomNoOpPasswordEncoder"></bean> -->
 <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+<bean id="costomUserDetailsService"
 
 	<!-- 기본적인 로그인 화면 제공 경계 지정-->	
 	<!-- 	<security:http auto-config="true" use-expressions="false" -->
