@@ -21,7 +21,9 @@
 		<!-- <security:access-denied-handler error-page="/accessError"/> -->
 		<security:access-denied-handler ref="customAccessDenied"/>
 	
-		<security:form-login/>
+		<!-- 주석은 기본값 밑에는 페이지 -->
+		<!-- <security:form-login/> -->
+		<security:form-login login-page="/customLogin"/>
 		
 	</security:http>
 
